@@ -7,87 +7,87 @@ mouse cursor, scroll, left/right click, using one's hands. Plans include to intr
 as augmented reality HUD and full emulation of keyboard and numpad plus custom AR applications. 
 If all goes well final product will also include voice command recognition.
 
-**CURRENT BUILD = PRE-ALPHA**
-**CURRENT SUPPORTED OSes = UBUNTU, MAC**
-**ADDITIONAL DEPENDENCIES = OpenCV, Xlib**
+**CURRENT BUILD = PRE-ALPHA**<br />
+**CURRENT SUPPORTED OSes = UBUNTU, MAC**<br />
+**ADDITIONAL DEPENDENCIES = OpenCV, Xlib**<br />
 
 HOW TO USE (Not working for current build)
 -----------
 
-**Alpha Build**
--Edit Source File to Calibrate
--For hand recognition
---uncomment createTrackBars() and imShow(..., threshold)
----run program and move sliders until only hand is white and visible on screen
--For colored tape recognition
---uncomment createTrackBarsColors(), imShow(...,threshold), imShow(..., bThreshold), imShow(..., rThreshold)
----run program and move green, blue, red sliders until only each color is visible in respective windows
--write down values from sliders after calibrating
---in source file edit values with numbers written down
----hand when using hand recognition
----green, blue, red when using colored tape recognition
----comment out methods you uncommented earlier.
--After calibration is done
---save source file
---open terminal and navigate to waveAtIt directory
----build using "make"
-----will automatically run application
------exit by pressing ESC
+**Alpha Build**<br />
+-Edit Source File to Calibrate<br />
+-For hand recognition<br />
+--uncomment createTrackBars() and imShow(..., threshold)<br />
+---run program and move sliders until only hand is white and visible on screen<br />
+-For colored tape recognition<br />
+--uncomment createTrackBarsColors(), imShow(...,threshold), imShow(..., bThreshold), imShow(..., rThreshold)<br />
+---run program and move green, blue, red sliders until only each color is visible in respective windows<br />
+-write down values from sliders after calibrating<br />
+--in source file edit values with numbers written down<br />
+---hand when using hand recognition<br />
+---green, blue, red when using colored tape recognition<br />
+---comment out methods you uncommented earlier.<br />
+-After calibration is done<br />
+--save source file<br />
+--open terminal and navigate to waveAtIt directory<br />
+---build using "make"<br />
+----will automatically run application<br />
+-----exit by pressing ESC<br />
 
 *Sorry for the mess still working out best way seamlessly automate this*
 
 CURRENT WORKING FEATURES
 -------------------------
 
-**Hand Tracking**
--Tracks hand using:
--- Green for mouse cursor,
--- blue = left click, 
---red = right click
--Or tracks hand using skin color filter
+**Hand Tracking**<br />
+-Tracks hand using:<br />
+-- Green for mouse cursor,<br />
+-- blue = left click, <br />
+--red = right click<br />
+-Or tracks hand using skin color filter<br />
 
-**Mouse Control**
--Moves mouse across most of the screen
--Clicks function properly and have a 1 second & 10 frame cooldown time
+**Mouse Control**<br />
+-Moves mouse across most of the screen<br />
+-Clicks function properly and have a 1 second & 10 frame cooldown time<br />
 
 
 CURRENT KNOWN BUGS
 -------------------
 
-**Hand Tracking**
--Have to recalibrate when environment lighting changes
--Using the skin color filters hand blends with forearm or face
---implementing face detection to remove from blending with hand
+**Hand Tracking**<br />
+-Have to recalibrate when environment lighting changes<br />
+-Using the skin color filters hand blends with forearm or face<br />
+--implementing face detection to remove from blending with hand<br />
 
-**Mouse Control**
--algorithm for reducing noise and jitteriness not 100%
---lighting conditions cause more noise
----causes mouse to be jittery
--Mapping webcam feed to screen cuts of screen edges
---mouse can't reach entire screen
+**Mouse Control**<br />
+-algorithm for reducing noise and jitteriness not 100%<br />
+--lighting conditions cause more noise<br />
+---causes mouse to be jittery<br />
+-Mapping webcam feed to screen cuts of screen edges<br />
+--mouse can't reach entire screen<br />
 
 
 PLANNED FUTURE ADDITIONS
 -------------------------
 
-**Gesture Control**
--Use certain gestures to control common aspects of OS interaction
---swipe for switching between workspaces in Linux/Mac
---run common apps such as browsers with unique gestures
---Shutdown, Reboot, Log-Off with specific gestures
---bring up HUD
+**Gesture Control**<br />
+-Use certain gestures to control common aspects of OS interaction<br />
+--swipe for switching between workspaces in Linux/Mac<br />
+--run common apps such as browsers with unique gestures<br />
+--Shutdown, Reboot, Log-Off with specific gestures<br />
+--bring up HUD<br />
 
-**Augmented Reality HUD**
--Implement helpful HUD for access to utilities and hardware emulation
---bring up HUD with hand gestures
---incorporate useful apps such as Calculator, Terminal, and frequently used apps
---emulated keyboard and NumPad for typing through webcam
---custom desktop locking app with several unlock styles (swype, pattern, combination lock)
---run/close voice Command Recognition app
+**Augmented Reality HUD**<br />
+-Implement helpful HUD for access to utilities and hardware emulation<br />
+--bring up HUD with hand gestures<br />
+--incorporate useful apps such as Calculator, Terminal, and frequently used apps<br />
+--emulated keyboard and NumPad for typing through webcam<br />
+--custom desktop locking app with several unlock styles (swype, pattern, combination lock)<br />
+--run/close voice Command Recognition app<br />
 
-**Voice Command Recognition**
--Run certain commands through mic
---initialize AR Voice Command Recognition App to issue voice commands
--Open browsers using voice commands
---Saying "Run Chrome"/"Run Firefox"/"Run Internet Explorer"
--Lock Desktop
+**Voice Command Recognition**<br />
+-Run certain commands through mic<br />
+--initialize AR Voice Command Recognition App to issue voice commands<br />
+-Open browsers using voice commands<br />
+--Saying "Run Chrome"/"Run Firefox"/"Run Internet Explorer"<br />
+-Lock Desktop<br />
